@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import WebFont from "webfontloader";
 
 import Layout from "./components/organisms/Layout";
-import PageView from "./views/PageView";
+import PaintingView from "./views/PaintingView";
 import store from "./store";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,13 +15,13 @@ import * as serviceWorker from "./serviceWorker";
 
 const root = document.getElementById("root");
 
-const startReactApp = () => {
+const runReactApp = () => {
   ReactDOM.render(
     <Provider store={store}>
       <Router>
         <Switch>
           <Layout>
-            <Route path="/" component={PageView} />
+            <Route path="/" component={PaintingView} />
           </Layout>
         </Switch>
       </Router>
@@ -61,8 +61,7 @@ WebFont.load({
     ]
   },
   active() {
-    console.log("fonts loaded!");
-    startReactApp();
+    runReactApp();
   }
 });
 

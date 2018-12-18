@@ -390,198 +390,6 @@ th {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.f-size-singularity, h1,
-.h1 {
-  font-size: 1.875rem; }
-  @media screen and (min-width: 767px) {
-    .f-size-singularity, h1,
-    .h1 {
-      font-size: 2rem; } }
-  @media screen and (min-width: 1029px) {
-    .f-size-singularity, h1,
-    .h1 {
-      font-size: 2.625rem; } }
-  @media screen and (min-width: 1399px) {
-    .f-size-singularity, h1,
-    .h1 {
-      font-size: 3.25rem; } }
-
-.f-size-huge, h2,
-.h2 {
-  font-size: 1.875rem; }
-  @media screen and (min-width: 767px) {
-    .f-size-huge, h2,
-    .h2 {
-      font-size: 2.125rem; } }
-  @media screen and (min-width: 1029px) {
-    .f-size-huge, h2,
-    .h2 {
-      font-size: 2rem; } }
-  @media screen and (min-width: 1399px) {
-    .f-size-huge, h2,
-    .h2 {
-      font-size: 2.25rem; } }
-
-.f-size-large {
-  font-size: 1.875rem; }
-  @media screen and (min-width: 767px) {
-    .f-size-large {
-      font-size: 1.875rem; } }
-  @media screen and (min-width: 1029px) {
-    .f-size-large {
-      font-size: 1.75rem; } }
-  @media screen and (min-width: 1399px) {
-    .f-size-large {
-      font-size: 2rem; } }
-
-.f-size-bigger, h3,
-.h3 {
-  font-size: 1.125rem; }
-  @media screen and (min-width: 767px) {
-    .f-size-bigger, h3,
-    .h3 {
-      font-size: 1.125rem; } }
-  @media screen and (min-width: 1029px) {
-    .f-size-bigger, h3,
-    .h3 {
-      font-size: 1.375rem; } }
-  @media screen and (min-width: 1399px) {
-    .f-size-bigger, h3,
-    .h3 {
-      font-size: 1.5rem; } }
-
-.f-size-big, h4,
-.h4 {
-  font-size: 1.25rem; }
-  @media screen and (min-width: 767px) {
-    .f-size-big, h4,
-    .h4 {
-      font-size: 1.375rem; } }
-  @media screen and (min-width: 1029px) {
-    .f-size-big, h4,
-    .h4 {
-      font-size: 1.25rem; } }
-  @media screen and (min-width: 1399px) {
-    .f-size-big, h4,
-    .h4 {
-      font-size: 1.375rem; } }
-
-.f-size-medium, h5,
-.h5 {
-  font-size: 1rem; }
-  @media screen and (min-width: 767px) {
-    .f-size-medium, h5,
-    .h5 {
-      font-size: 1.25rem; } }
-  @media screen and (min-width: 1029px) {
-    .f-size-medium, h5,
-    .h5 {
-      font-size: 1.0625rem; } }
-  @media screen and (min-width: 1399px) {
-    .f-size-medium, h5,
-    .h5 {
-      font-size: 1.125rem; } }
-
-.f-size-normal, p,
-.p {
-  font-size: 0.9375rem; }
-  @media screen and (min-width: 767px) {
-    .f-size-normal, p,
-    .p {
-      font-size: 1rem; } }
-  @media screen and (min-width: 1029px) {
-    .f-size-normal, p,
-    .p {
-      font-size: 0.9375rem; } }
-  @media screen and (min-width: 1399px) {
-    .f-size-normal, p,
-    .p {
-      font-size: 1rem; } }
-
-.f-size-small {
-  font-size: 0.75rem; }
-  @media screen and (min-width: 767px) {
-    .f-size-small {
-      font-size: 0.8125rem; } }
-  @media screen and (min-width: 1029px) {
-    .f-size-small {
-      font-size: 0.875rem; } }
-  @media screen and (min-width: 1399px) {
-    .f-size-small {
-      font-size: 0.9375rem; } }
-
-.f-size-little {
-  font-size: 0.75rem; }
-  @media screen and (min-width: 767px) {
-    .f-size-little {
-      font-size: 0.8125rem; } }
-  @media screen and (min-width: 1029px) {
-    .f-size-little {
-      font-size: 0.8125rem; } }
-  @media screen and (min-width: 1399px) {
-    .f-size-little {
-      font-size: 0.875rem; } }
-
-.f-size-tiny {
-  font-size: 0.75rem; }
-  @media screen and (min-width: 767px) {
-    .f-size-tiny {
-      font-size: 0.75rem; } }
-  @media screen and (min-width: 1029px) {
-    .f-size-tiny {
-      font-size: 0.75rem; } }
-  @media screen and (min-width: 1399px) {
-    .f-size-tiny {
-      font-size: 0.75rem; } }
-
-/******************************************************************
-H1, H2, H3, H4, H5 STYLES
-******************************************************************/
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5 {
-  text-rendering: optimizelegibility;
-  font-weight: 400; }
-  h1 a,
-  .h1 a,
-  h2 a,
-  .h2 a,
-  h3 a,
-  .h3 a,
-  h4 a,
-  .h4 a,
-  h5 a,
-  .h5 a {
-    text-decoration: none; }
-
-h1,
-.h1 {
-  font-weight: 700; }
-
-/************
-COPY
-So the paragraphs are WAAAY more readible
-only applies to paragraphs within WRAP
-*************/
-p,
-.p {
-  -ms-word-wrap: break-word;
-  word-break: break-word;
-  word-wrap: break-word;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  hyphens: none;
-  -webkit-hyphenate-before: 2;
-  -webkit-hyphenate-after: 3;
-  hyphenate-lines: 3; }
-
 @font-face {
   font-family: Font_0;
   src: url("./assets/fonts/Font_0.ttf"); }
@@ -682,90 +490,6 @@ p,
   font-family: Font_24;
   src: url("./assets/fonts/Font_24.ttf"); }
 
-.wrap {
-  max-width: 1000px;
-  margin: 0 auto; }
-
-.desktop__wrap {
-  background-color: #ebebed; }
-
-.mobile__wrap {
-  display: none; }
-
-h1 {
-  margin: 0;
-  padding: 0;
-  letter-spacing: 3px;
-  text-align: center;
-  margin-top: 50px;
-  color: #333333;
-  width: 100%;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 30px;
-  font-family: "Gudea", sans-serif; }
-
-.text__wrap {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center; }
-  .text__wrap p {
-    text-align: justify;
-    margin-top: 30px;
-    max-width: 350px;
-    letter-spacing: 1px;
-    line-height: 26px;
-    font-size: 16px;
-    color: #333333;
-    font-family: "Gudea", sans-serif; }
-
-.canvas__wrap {
-  position: relative; }
-
-.loading__wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
-.add-button__wrap {
-  width: 100%;
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .add-button__wrap button {
-    background-color: black;
-    border-radius: 0;
-    text-transform: uppercase;
-    padding: 10px 50px;
-    height: 50px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    box-shadow: -1px 0px 1px 1px rgba(0, 0, 0, 0.3);
-    font-family: "Gudea", sans-serif; }
-
-.frame__wrap {
-  padding: 50px 0 100px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap; }
-
-.canvas {
-  border: 50px solid black;
-  box-shadow: inset 0px 0px 30px 12px rgba(0, 0, 0, 0.3), 0px 3px 15px 5px rgba(0, 0, 0, 0.3);
-  background-color: white; }
-
-.fonts__wrap {
-  display: block;
-  position: absolute;
-  left: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden; }
-
 .font0 {
   font-family: Font_0; }
 
@@ -841,8 +565,106 @@ h1 {
 .font24 {
   font-family: font_24; }
 
-.floor-img {
-  width: 100vw; }
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+p,
+.p,
+a,
+.a {
+  font-family: "Gudea", sans-serif;
+  color: #333333; }
+
+h1,
+.h1 {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px; }
+
+.h4 {
+  font-weight: 700; }
+
+p {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  line-height: 26px;
+  font-size: 16px; }
+
+.header {
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 50px 0; }
+  .header .h1 {
+    text-align: center; }
+  .header .p {
+    margin-top: 30px;
+    text-align: justify; }
+
+.fonts__wrap {
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+
+.desktop__app {
+  background-color: #ebebed; }
+
+.mobile__app {
+  display: none; }
+
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.loading__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.art__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px; }
+
+.canvas__wrap {
+  position: relative; }
+
+.canvas {
+  border: 50px solid #000000;
+  box-shadow: inset 0px 0px 30px 12px rgba(0, 0, 0, 0.3), 0px 3px 15px 5px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff; }
+
+.add-button__wrap {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .add-button__wrap button {
+    background-color: #000000;
+    border-radius: 0;
+    text-transform: uppercase;
+    padding: 10px 50px;
+    height: 50px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    box-shadow: -1px 0px 1px 1px rgba(0, 0, 0, 0.3);
+    font-family: "Gudea", sans-serif; }
 
 .modal-title {
   font-family: "Gudea", sans-serif; }
@@ -852,7 +674,7 @@ h1 {
   .modal-body .form-control {
     font-family: "Gudea", sans-serif; }
   .modal-body button {
-    background-color: black;
+    background-color: #000000;
     border-radius: 0;
     text-transform: uppercase;
     padding: 10px 50px;
@@ -861,8 +683,24 @@ h1 {
     letter-spacing: 3px;
     font-family: "Gudea", sans-serif; }
 
+.footer {
+  position: relative; }
+
+.floor-img {
+  width: 100vw; }
+
+.copyright__wrap {
+  position: absolute;
+  text-align: center;
+  bottom: 20px;
+  width: 100%; }
+  .copyright__wrap a {
+    text-decoration: underline;
+    color: #ffffff;
+    font-weight: 700; }
+
 @media (max-width: 1000px) {
-  .desktop__wrap {
+  .desktop__app {
     display: none; }
-  .mobile__wrap {
+  .mobile__app {
     display: block; } }

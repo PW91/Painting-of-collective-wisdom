@@ -35,15 +35,18 @@ class AddItemModal extends Component {
     });
   };
 
+  normalizeValue = value => {
+    return value
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-zA-Z ]/g, "");
+  };
+
   onFormSubmit = e => {
     e.preventDefault();
 
     const { addItem } = this.props;
-
-    const word = this.state.name
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^a-zA-Z ]/g, "");
+    const word = this.normalizeValue(this.state.name);
 
     if (word.length > 0 && word.length < 20) {
       addItem(word);
@@ -51,7 +54,7 @@ class AddItemModal extends Component {
     } else {
       this.setState({
         errorFlag: true,
-        errorMsg: "Phrase is not valid!"
+        errorMsg: "Validation error!"
       });
     }
   };

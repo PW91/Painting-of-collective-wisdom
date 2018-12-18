@@ -4,34 +4,35 @@ import propTypes from "prop-types";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import AddItemModal from "../components/organisms/AddItemModal";
 import { itemsActions } from "../modules/items";
+import AddItemModal from "../components/organisms/AddItemModal";
 import LoadingAlert from "../components/atoms/LoadingAlert";
+import MainHeader from "../components/organisms/MainHeader";
 
-class PageContainer extends Component {
+class PaintingContainer extends Component {
   componentDidMount() {
-    this.canvas = document.getElementsByClassName("canvas")[0];
-    this.ctx = this.canvas.getContext("2d");
-
-    this.canvas.width = 700;
-    this.canvas.height = 700;
-
     const { items } = this.props;
 
     if (!items.length) {
       this.props.itemsActions.watchGettingItems();
     }
+
+    this.initializeCanvas();
   }
 
   componentWillReceiveProps({ items }) {
-    this.drawCanvas(items);
+    this.fillCanvas(items);
   }
 
-  getRandomArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
-  }
+  initializeCanvas = () => {
+    this.canvas = document.getElementsByClassName("canvas")[0];
+    this.ctx = this.canvas.getContext("2d");
 
-  drawCanvas(items) {
+    this.canvas.width = 700;
+    this.canvas.height = 700;
+  };
+
+  fillCanvas = items => {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
     items.forEach(item => {
@@ -40,6 +41,11 @@ class PageContainer extends Component {
       this.ctx.globalCompositeOperation = "destination-over";
       this.ctx.font = `${size}px ${font}`;
       this.ctx.fillStyle = color;
+      this.ctx.save();
+      this.ctx.textBaseline = "middle";
+      this.ctx.textAlign = "center";
+      this.ctx.translate(this.canvas.width / 2, this.canvas.height / 2);
+      this.ctx.rotate((deg * Math.PI) / 180);
 
       let xPosition;
       let yPosition;
@@ -58,32 +64,28 @@ class PageContainer extends Component {
         yPosition = y + size / 2;
       }
 
-      this.ctx.save();
-      this.ctx.textBaseline = "middle";
-      this.ctx.textAlign = "center";
-      this.ctx.translate(this.canvas.width / 2, this.canvas.height / 2);
-      this.ctx.rotate((deg * Math.PI) / 180);
-
       this.ctx.fillText(word, xPosition, yPosition);
       this.ctx.restore();
     });
-  }
+  };
 
-  addItem = word => {
+  prepareItemRandomness = word => {
+    const deg = this.getRandomFromRange(-90, 90);
+    const size = this.getRandomFromRange(5, 200);
+
     const color = "#" + Math.floor(Math.random() * 16777215).toString(16);
-    const x = this.getRandomArbitrary(
+    const font = "Font_" + Math.floor(this.getRandomFromRange(0, 24));
+
+    const x = this.getRandomFromRange(
       -this.canvas.width / 2,
       this.canvas.width / 2
     );
-    const y = this.getRandomArbitrary(
+    const y = this.getRandomFromRange(
       -this.canvas.height / 2,
       this.canvas.height / 2
     );
-    const deg = this.getRandomArbitrary(-90, 90);
-    const size = this.getRandomArbitrary(5, 200);
-    const font = "Font_" + Math.floor(this.getRandomArbitrary(0, 24));
 
-    const obj = {
+    return {
       word,
       color,
       x,
@@ -92,8 +94,15 @@ class PageContainer extends Component {
       size,
       font
     };
+  };
 
-    this.props.itemsActions.watchPostingItem(obj);
+  addItem = word => {
+    const randomizedObj = this.prepareItemRandomness(word);
+    this.props.itemsActions.watchPostingItem(randomizedObj);
+  };
+
+  getRandomFromRange = (min, max) => {
+    return Math.random() * (max - min) + min;
   };
 
   render() {
@@ -101,38 +110,23 @@ class PageContainer extends Component {
     const itemsLength = items.length;
 
     return (
-      <div className="container__wrap">
-        <Container>
-          <div className="text__wrap">
-            <h1>
-              PAINTING OF
-              <br />
-              COLLECTIVE WISDOM
-            </h1>
-            <p>
-              You are looking at the painting. Painting of collective wisdom.
-              Currently it contains {itemsLength} items. Everyone can co-create
-              it. Even you. You choose word or phrase. Everything else is done
-              automatically. Just remember: it will stay on the web forever. So
-              try to be nice.
-            </p>
-          </div>
-          <div className="frame__wrap">
-            <div className="inside">
-              <div className="canvas__wrap">
-                <LoadingAlert loadingFlag={loadingFlag} />
-                <canvas className="canvas" />
-              </div>
-              <AddItemModal addItem={this.addItem} />
+      <Container>
+        <MainHeader counter={itemsLength} />
+        <div className="art__wrap">
+          <div className="art">
+            <div className="canvas__wrap">
+              <LoadingAlert loadingFlag={loadingFlag} />
+              <canvas className="canvas" />
             </div>
+            <AddItemModal addItem={this.addItem} />
           </div>
-        </Container>
-      </div>
+        </div>
+      </Container>
     );
   }
 }
 
-PageContainer.propTypes = {
+PaintingContainer.propTypes = {
   items: propTypes.array.isRequired,
   loadingFlag: propTypes.bool.isRequired
 };
@@ -149,4 +143,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(PageContainer);
+)(PaintingContainer);
