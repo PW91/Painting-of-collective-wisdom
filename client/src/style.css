@@ -556,7 +556,7 @@ th {
 
 @font-face {
   font-family: Font_41;
-  src: url("./assets/fonts/Font_41.ttf"); }
+  src: url("./assets/fonts/Font_41.ttf") format("truetype"); }
 
 @font-face {
   font-family: Font_42;
@@ -805,13 +805,8 @@ p {
   height: 1px;
   overflow: hidden; }
 
-.desktop__app {
+.app {
   background-color: #ebebed; }
-
-.mobile__app {
-  display: none;
-  text-align: center;
-  padding-top: 100px; }
 
 .wrap {
   max-width: 1000px;
@@ -892,7 +887,7 @@ p {
   .header {
     max-width: 300px; }
   .canvas {
-    border-width: 12px;
+    border-width: 17px;
     box-shadow: inset 0px 0px 15px 6px rgba(0, 0, 0, 0.3), 0px 2px 7px 2px rgba(0, 0, 0, 0.3); }
   .add-button__wrap button {
     padding: 10px 20px;

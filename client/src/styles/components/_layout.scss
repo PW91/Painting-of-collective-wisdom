@@ -25,18 +25,8 @@
 
 // WRAPPERS:
 
-.desktop {
-  &__app {
-    background-color: $semi-white;
-  }
-}
-
-.mobile {
-  &__app {
-    display: none;
-    text-align: center;
-    padding-top: 100px;
-  }
+.app {
+  background-color: $semi-white;
 }
 
 .wrap {
@@ -149,19 +139,12 @@
 // MEDIA QUERIES:
 
 @media (max-width: 999px) {
-  .desktop {
-    &__app {
-      //transform: scale(0.5);
-      //display: none;
-    }
-  }
-
   .header {
     max-width: 300px;
   }
 
   .canvas {
-    border-width: 12px;
+    border-width: 17px;
     box-shadow: inset 0px 0px 15px 6px rgba(0, 0, 0, 0.3),
       0px 2px 7px 2px rgba(0, 0, 0, 0.3);
   }
@@ -176,20 +159,9 @@
     }
   }
 
-  .footer {
-    //position: absolute;
-    //bottom: 0;
-  }
-
   .copyright {
     &__wrap {
       bottom: 2vw;
-    }
-  }
-
-  .mobile {
-    &__app {
-      //display: block;
     }
   }
 }
