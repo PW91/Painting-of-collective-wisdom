@@ -14,18 +14,22 @@ import * as serviceWorker from "./serviceWorker";
 
 const root = document.getElementById("root");
 
-ReactDOM.render(
-  <Provider store={store}>
-    <Router>
-      <Switch>
-        <Layout>
-          <Route path="/page" component={PageView} />
-        </Layout>
-      </Switch>
-    </Router>
-  </Provider>,
-  root
-);
+document.fonts.ready.then(() => {
+  console.log("fonts ready!");
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <Router>
+        <Switch>
+          <Layout>
+            <Route path="/page" component={PageView} />
+          </Layout>
+        </Switch>
+      </Router>
+    </Provider>,
+    root
+  );
+});
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
