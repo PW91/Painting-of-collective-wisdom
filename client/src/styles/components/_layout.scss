@@ -115,6 +115,14 @@
       letter-spacing: 1px;
     }
   }
+  .alert {
+    text-align: center;
+    font-family: "Gudea", sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+  }
   button {
     background-color: $black;
     border-radius: 0;

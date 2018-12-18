@@ -894,6 +894,13 @@ li {
     .modal-body .form-control::placeholder {
       font-family: "Gudea", sans-serif;
       letter-spacing: 1px; }
+  .modal-body .alert {
+    text-align: center;
+    font-family: "Gudea", sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0; }
   .modal-body button {
     background-color: #000000;
     border-radius: 0;
