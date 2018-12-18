@@ -10,6 +10,15 @@ import LoadingAlert from "../components/atoms/LoadingAlert";
 import MainHeader from "../components/organisms/MainHeader";
 
 class PaintingContainer extends Component {
+  state = {
+    mobileFlag: false,
+    mobileDivider: 1
+  };
+
+  componentWillMount() {
+    this.checkMobile();
+  }
+
   componentDidMount() {
     const { items } = this.props;
 
@@ -24,22 +33,34 @@ class PaintingContainer extends Component {
     this.fillCanvas(items);
   }
 
+  checkMobile = () => {
+    if (window.innerWidth < 1000) {
+      this.setState({
+        mobileFlag: true,
+        mobileDivider: 3
+      });
+    }
+  };
+
   initializeCanvas = () => {
+    const { mobileDivider } = this.state;
     this.canvas = document.getElementsByClassName("canvas")[0];
     this.ctx = this.canvas.getContext("2d");
 
-    this.canvas.width = 700;
-    this.canvas.height = 700;
+    this.canvas.width = 700 / mobileDivider;
+    this.canvas.height = 700 / mobileDivider;
   };
 
   fillCanvas = items => {
+    const { mobileDivider } = this.state;
+
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
     items.forEach(item => {
       const { word, color, deg, font, size, x, y } = item;
 
       this.ctx.globalCompositeOperation = "destination-over";
-      this.ctx.font = `${size}px ${font}`;
+      this.ctx.font = `${size / mobileDivider}px ${font}`;
       this.ctx.fillStyle = color;
       this.ctx.save();
       this.ctx.textBaseline = "middle";
@@ -50,18 +71,18 @@ class PaintingContainer extends Component {
       let xPosition;
       let yPosition;
 
-      if (x > 0) {
-        xPosition = x - this.ctx.measureText(word).width / 2;
+      if (x / mobileDivider > 0) {
+        xPosition = x / mobileDivider - this.ctx.measureText(word).width / 2;
       } else {
-        xPosition = x + this.ctx.measureText(word).width / 2;
+        xPosition = x / mobileDivider + this.ctx.measureText(word).width / 2;
       }
 
       if (y === 0) {
-        yPosition = y;
+        yPosition = y / mobileDivider;
       } else if (y > 0) {
-        yPosition = y - size / 2;
+        yPosition = y / mobileDivider - size / mobileDivider / 2;
       } else {
-        yPosition = y + size / 2;
+        yPosition = y / mobileDivider + size / mobileDivider / 2;
       }
 
       this.ctx.fillText(word, xPosition, yPosition);

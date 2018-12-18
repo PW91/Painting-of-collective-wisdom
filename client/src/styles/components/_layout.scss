@@ -148,16 +148,48 @@
 
 // MEDIA QUERIES:
 
-@media (max-width: 1000px) {
+@media (max-width: 999px) {
   .desktop {
     &__app {
-      display: none;
+      //transform: scale(0.5);
+      //display: none;
+    }
+  }
+
+  .header {
+    max-width: 300px;
+  }
+
+  .canvas {
+    border-width: 12px;
+    box-shadow: inset 0px 0px 15px 6px rgba(0, 0, 0, 0.3),
+      0px 2px 7px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .add-button {
+    &__wrap {
+      button {
+        padding: 10px 20px;
+        height: initial;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .footer {
+    //position: absolute;
+    //bottom: 0;
+  }
+
+  .copyright {
+    &__wrap {
+      bottom: 2vw;
     }
   }
 
   .mobile {
     &__app {
-      display: block;
+      //display: block;
     }
   }
 }

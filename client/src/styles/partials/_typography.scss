@@ -345,59 +345,59 @@
 }
 
 .font24 {
-  font-family: font_24;
+  font-family: Font_24;
 }
 
 .font25 {
-  font-family: font_25;
+  font-family: Font_25;
 }
 
 .font26 {
-  font-family: font_26;
+  font-family: Font_26;
 }
 
 .font27 {
-  font-family: font_27;
+  font-family: Font_27;
 }
 
 .font28 {
-  font-family: font_28;
+  font-family: Font_28;
 }
 
 .font29 {
-  font-family: font_29;
+  font-family: Font_29;
 }
 
 .font30 {
-  font-family: font_30;
+  font-family: Font_30;
 }
 
 .font31 {
-  font-family: font_31;
+  font-family: Font_31;
 }
 
 .font32 {
-  font-family: font_32;
+  font-family: Font_32;
 }
 
 .font33 {
-  font-family: font_33;
+  font-family: Font_33;
 }
 
 .font34 {
-  font-family: font_34;
+  font-family: Font_34;
 }
 
 .font35 {
-  font-family: font_35;
+  font-family: Font_35;
 }
 
 .font36 {
-  font-family: font_36;
+  font-family: Font_36;
 }
 
 .font37 {
-  font-family: font_37;
+  font-family: Font_37;
 }
 
 .font38 {
@@ -405,47 +405,47 @@
 }
 
 .font39 {
-  font-family: font_39;
+  font-family: Font_39;
 }
 
 .font40 {
-  font-family: font_40;
+  font-family: Font_40;
 }
 
 .font41 {
-  font-family: font_41;
+  font-family: Font_41;
 }
 
 .font42 {
-  font-family: font_42;
+  font-family: Font_42;
 }
 
 .font43 {
-  font-family: font_43;
+  font-family: Font_43;
 }
 
 .font44 {
-  font-family: font_44;
+  font-family: Font_44;
 }
 
 .font45 {
-  font-family: font_45;
+  font-family: Font_45;
 }
 
 .font46 {
-  font-family: font_46;
+  font-family: Font_46;
 }
 
 .font47 {
-  font-family: font_47;
+  font-family: Font_47;
 }
 
 .font48 {
-  font-family: font_48;
+  font-family: Font_48;
 }
 
 .font49 {
-  font-family: font_49;
+  font-family: Font_49;
 }
 
 h1,
@@ -488,4 +488,22 @@ p {
   letter-spacing: 1px;
   line-height: 26px;
   font-size: 16px;
+}
+
+@media (max-width: 999px) {
+  h1,
+  .h1 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  h6,
+  .h6 {
+    font-size: 10px;
+  }
+
+  p {
+    line-height: 20px;
+    font-size: 12px;
+  }
 }
