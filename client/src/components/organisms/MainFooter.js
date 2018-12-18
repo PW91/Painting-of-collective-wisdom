@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import floorImg from "../../assets/images/floor.jpg";
+import floorImg from "../../assets/images/floor.png";
 
 class MainFooter extends Component {
   render() {

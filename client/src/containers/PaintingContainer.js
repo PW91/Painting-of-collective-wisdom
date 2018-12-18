@@ -74,7 +74,7 @@ class PaintingContainer extends Component {
     const size = this.getRandomFromRange(5, 200);
 
     const color = "#" + Math.floor(Math.random() * 16777215).toString(16);
-    const font = "Font_" + Math.floor(this.getRandomFromRange(0, 24));
+    const font = "Font_" + Math.floor(this.getRandomFromRange(0, 49));
 
     const x = this.getRandomFromRange(
       -this.canvas.width / 2,
