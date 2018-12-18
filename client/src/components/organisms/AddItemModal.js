@@ -48,7 +48,7 @@ class AddItemModal extends Component {
     const { addItem } = this.props;
     const word = this.normalizeValue(this.state.name);
 
-    if (word.length > 0 && word.length < 20) {
+    if (word.length > 0 && word.length < 21) {
       addItem(word);
       this.toggleModal();
     } else {
@@ -66,10 +66,16 @@ class AddItemModal extends Component {
           Co-create
         </Button>
         <Modal isOpen={this.state.modalOpenFlag} toggle={this.toggleModal}>
-          <ModalHeader toggle={this.toggleModal}>
-            Be an artist and add your thing!
-          </ModalHeader>
+          <ModalHeader toggle={this.toggleModal} />
           <ModalBody>
+            <h2> Be an artist, add wisdom!</h2>
+            <p>Just please:</p>
+            <ul>
+              <li>Maximum 20 characters</li>
+              <li>Without any numbers</li>
+              <li>Without any special signs</li>
+            </ul>
+
             <Form onSubmit={this.onFormSubmit}>
               <FormGroup>
                 <Label for="item" />
@@ -77,7 +83,7 @@ class AddItemModal extends Component {
                   type="text"
                   name="name"
                   id="item"
-                  placeholder="max 20 signs, no numbers, no special characters"
+                  placeholder="Your word or phrase"
                   onChange={this.onInputChange}
                 />
               </FormGroup>
@@ -86,7 +92,7 @@ class AddItemModal extends Component {
                 errorMsg={this.state.errorMsg}
               />
               <Button color="dark" block>
-                CO-CREATE
+                ADD WISDOM
               </Button>
             </Form>
           </ModalBody>

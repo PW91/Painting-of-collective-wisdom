@@ -14,9 +14,10 @@ class MainHeader extends Component {
         </h1>
         <p className="p">
           You are looking at the painting. Painting of collective wisdom.
-          Currently it contains {counter} items. Everyone can co-create it. Even
-          you. You choose word or phrase. Everything else is done automatically.
-          Just remember: it will stay on the web forever. So try to be nice.
+          Currently it contains {counter} wisdoms. Everyone can co-create it.
+          Even you. You choose word or phrase. Everything else is done
+          automatically. Just remember: it will stay on the web forever. So try
+          to be wise.
         </p>
       </header>
     );

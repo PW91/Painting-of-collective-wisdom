@@ -463,7 +463,9 @@ h6,
 p,
 .p,
 a,
-.a {
+.a,
+ul,
+li {
   font-family: "Gudea", sans-serif;
   color: $text-color;
 }
@@ -478,6 +480,17 @@ h1,
   line-height: 30px;
 }
 
+h2,
+.h2 {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .h4 {
   font-weight: 700;
 }
@@ -490,11 +503,25 @@ p {
   font-size: 16px;
 }
 
+li {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  line-height: 20px;
+  font-size: 14px;
+}
+
 @media (max-width: 999px) {
   h1,
   .h1 {
     font-size: 24px;
     line-height: 24px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 20px;
+    line-height: 20px;
   }
 
   h6,
@@ -504,6 +531,10 @@ p {
 
   p {
     line-height: 20px;
+    font-size: 12px;
+  }
+
+  li {
     font-size: 12px;
   }
 }

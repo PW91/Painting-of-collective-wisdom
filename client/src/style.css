@@ -755,7 +755,9 @@ h6,
 p,
 .p,
 a,
-.a {
+.a,
+ul,
+li {
   font-family: "Gudea", sans-serif;
   color: #333333; }
 
@@ -768,6 +770,16 @@ h1,
   font-size: 30px;
   line-height: 30px; }
 
+h2,
+.h2 {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
 .h4 {
   font-weight: 700; }
 
@@ -778,20 +790,33 @@ p {
   line-height: 26px;
   font-size: 16px; }
 
+li {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  line-height: 20px;
+  font-size: 14px; }
+
 @media (max-width: 999px) {
   h1,
   .h1 {
     font-size: 24px;
     line-height: 24px; }
+  h2,
+  .h2 {
+    font-size: 20px;
+    line-height: 20px; }
   h6,
   .h6 {
     font-size: 10px; }
   p {
     line-height: 20px;
+    font-size: 12px; }
+  li {
     font-size: 12px; } }
 
 .header {
-  max-width: 350px;
+  max-width: 360px;
   margin: 0 auto;
   padding: 50px 0; }
   .header .h1 {
@@ -853,10 +878,22 @@ p {
 .modal-title {
   font-family: "Gudea", sans-serif; }
 
+.modal-header {
+  border: none; }
+
+.form-control {
+  border-radius: 0; }
+
 .modal-body {
-  font-family: "Gudea", sans-serif; }
+  font-family: "Gudea", sans-serif;
+  padding: 0 30px 50px 30px; }
   .modal-body .form-control {
-    font-family: "Gudea", sans-serif; }
+    font-family: "Gudea", sans-serif;
+    letter-spacing: 1px;
+    height: 50px; }
+    .modal-body .form-control::placeholder {
+      font-family: "Gudea", sans-serif;
+      letter-spacing: 1px; }
   .modal-body button {
     background-color: #000000;
     border-radius: 0;
@@ -866,6 +903,10 @@ p {
     font-weight: 700;
     letter-spacing: 3px;
     font-family: "Gudea", sans-serif; }
+
+ul {
+  margin: 10px 0 0 20px;
+  padding: 0; }
 
 .footer {
   position: relative; }
@@ -890,6 +931,10 @@ p {
     border-width: 17px;
     box-shadow: inset 0px 0px 15px 6px rgba(0, 0, 0, 0.3), 0px 2px 7px 2px rgba(0, 0, 0, 0.3); }
   .add-button__wrap button {
+    padding: 10px 20px;
+    height: initial;
+    font-size: 14px; }
+  .modal-body button {
     padding: 10px 20px;
     height: initial;
     font-size: 14px; }
