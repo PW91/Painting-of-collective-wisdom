@@ -1,0 +1,254 @@
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header,
+footer {
+}
+
+.desktop {
+  &__wrap {
+    background-color: #ebebed;
+  }
+}
+
+.mobile {
+  &__wrap {
+    display: none;
+  }
+}
+
+.app {
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: 50px;
+  color: #333333;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  font-family: "Gudea", sans-serif;
+}
+
+.text__wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  p {
+    text-align: justify;
+    margin-top: 30px;
+    max-width: 350px;
+    letter-spacing: 1px;
+    line-height: 26px;
+    font-size: 16px;
+    color: #333333;
+    font-family: "Gudea", sans-serif;
+  }
+}
+
+.canvas__wrap {
+  position: relative;
+}
+
+.loading__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add-button {
+  &__wrap {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      background-color: black;
+      border-radius: 0;
+      text-transform: uppercase;
+      padding: 10px 50px;
+      height: 50px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      box-shadow: -1px 0px 1px 1px rgba(0, 0, 0, 0.3);
+      font-family: "Gudea", sans-serif;
+    }
+  }
+}
+
+.container {
+  &__wrap {
+  }
+}
+
+.frame {
+  &__wrap {
+    padding: 50px 0 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.canvas {
+  border: 50px solid black;
+  box-shadow: inset 0px 0px 30px 12px rgba(0, 0, 0, 0.3),
+    0px 3px 15px 5px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+.fonts__wrap {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.font0 {
+  font-family: Font_0;
+}
+
+.font1 {
+  font-family: Font_1;
+}
+
+.font2 {
+  font-family: Font_2;
+}
+
+.font3 {
+  font-family: Font_3;
+}
+
+.font4 {
+  font-family: Font_4;
+}
+
+.font5 {
+  font-family: Font_5;
+}
+
+.font6 {
+  font-family: Font_6;
+}
+
+.font7 {
+  font-family: Font_7;
+}
+
+.font8 {
+  font-family: Font_8;
+}
+
+.font9 {
+  font-family: Font_9;
+}
+
+.font10 {
+  font-family: Font_10;
+}
+
+.font11 {
+  font-family: Font_11;
+}
+
+.font12 {
+  font-family: Font_12;
+}
+
+.font13 {
+  font-family: Font_13;
+}
+
+.font14 {
+  font-family: Font_14;
+}
+
+.font15 {
+  font-family: Font_15;
+}
+
+.font16 {
+  font-family: Font_16;
+}
+
+.font17 {
+  font-family: Font_17;
+}
+
+.font18 {
+  font-family: Font_18;
+}
+
+.font19 {
+  font-family: Font_19;
+}
+
+.font20 {
+  font-family: Font_20;
+}
+
+.font21 {
+  font-family: Font_21;
+}
+
+.font22 {
+  font-family: Font_22;
+}
+
+.font23 {
+  font-family: Font_23;
+}
+
+.font24 {
+  font-family: font_24;
+}
+
+.floor-img {
+  width: 100vw;
+}
+
+.modal-title {
+  font-family: "Gudea", sans-serif;
+}
+
+.modal-body {
+  font-family: "Gudea", sans-serif;
+
+  .form-control {
+    font-family: "Gudea", sans-serif;
+  }
+  button {
+    background-color: black;
+    border-radius: 0;
+    text-transform: uppercase;
+    padding: 10px 50px;
+    height: 50px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-family: "Gudea", sans-serif;
+  }
+}
+
+@media (max-width: 1000px) {
+  .desktop__wrap {
+    display: none;
+  }
+
+  .mobile__wrap {
+    display: block;
+  }
+}

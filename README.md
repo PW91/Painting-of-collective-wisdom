@@ -1,0 +1,1 @@
+# Painting of collective wisdom
